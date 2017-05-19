@@ -28,9 +28,10 @@ public class ServiceImpl implements IService {
 		
 		if (getQtyEnStock(id) < quantite)		
 			throw new NotEnoughArticleException();
-				
+		
+		System.out.println("AVANT: " + stockRepository.findOne(id).getQuantite());
 		stockRepository.sortArticleDuStock(id, quantite);
-
+		System.out.println("APRES: " +stockRepository.findOne(id).getQuantite());
 	}
 
 	@Override

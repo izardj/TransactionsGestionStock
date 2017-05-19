@@ -22,6 +22,7 @@ public class Lanceur {
 				Stock s2 = (Stock) appContext.getBean("stock");
 				Stock s3 = (Stock) appContext.getBean("stock");
 				Stock s4 = (Stock) appContext.getBean("stock");
+				/*
 				s1.setNom("Ordinateurs");
 				s1.setQuantite(40);
 				service.ajouter(s1);
@@ -37,10 +38,11 @@ public class Lanceur {
 				s4.setNom("Ecrans");
 				s4.setQuantite(10);
 				service.ajouter(s4);
+				*/
 				// 3- Traitement
-
+				
 				try {
-					service.sortArticleDuStock(2, 4);
+					service.sortArticleDuStock(1, 2);
 				} catch (ArticleNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
